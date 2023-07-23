@@ -1,5 +1,7 @@
 package org.example.examples.chapter1;
 
+import org.example.examples.chapter1.Artist;
+
 import java.util.stream.Stream;
 
 import static java.util.stream.Stream.concat;
