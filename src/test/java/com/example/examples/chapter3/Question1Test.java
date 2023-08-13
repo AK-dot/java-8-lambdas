@@ -29,7 +29,7 @@ public class Question1Test {
 
     @Test
     public void getAlbumsWithAtMostThreeTracksTest() {
-        assertEquals(Arrays.asList(manyTrackAlbum), getAlbumsWithAtMostThreeTracks(
+        assertEquals(Arrays.asList(manyTrackAlbum, sampleShortAlbum, aLoveSupreme), getAlbumsWithAtMostThreeTracks(
                 Arrays.asList(manyTrackAlbum, sampleShortAlbum, aLoveSupreme)));
     }
 }
