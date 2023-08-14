@@ -16,23 +16,14 @@ public class Question1 {
     }
 
     public static List<String> getNamesAndOrigins(List<Artist> artists) {
-         List<String> nationality = artists.stream()
-
-                .map(artist -> artist.getNationality())
-                .collect(toList());
-
-         List<String> name = artists.stream()
-                 .map(artist -> artist.getName())
-                 .collect(toList());
-         return Stream.of( name, nationality)
-                 .flatMap(strings -> strings.stream())
+         return artists.stream()
+                 .flatMap(artist -> Stream.of(artist.getName(), artist.getNationality()))
                  .collect(toList());
     }
 
     public static List<Album> getAlbumsWithAtMostThreeTracks(List<Album> input) {
         return input.stream()
-                .flatMap(album -> album.getTrackList())
-                .filter(trackList -> trackList.size() <= 3)
+                .filter(album -> album.getTrackList().size() <= 3)
                 .collect(toList());
     }
 
