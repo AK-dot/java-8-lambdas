@@ -43,7 +43,7 @@ public class StringCombiner {
         return prefix + builder.toString() + suffix;
     }
     // END toString
-    
+
     private boolean areAtStart() {
         return builder.length() == 0;
     }
