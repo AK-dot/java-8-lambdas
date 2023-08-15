@@ -95,4 +95,13 @@ public class StringExamples {
         return result;
     }
 
+    public static String formatArtistsRefactor5(List<Artist> artists) {
+        // BEGIN refactor_5
+        String result =
+                artists.stream()
+                        .map(Artist::getName)
+                        .collect(new StringCollector(", ", "[", "]"));
+        // END refactor_5
+        return result;
+    }
 }
