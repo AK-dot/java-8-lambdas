@@ -15,7 +15,9 @@ public class Niceties {
 
         public abstract Artist getArtist(String name);
 
-        protected Artist readArtistFromDB(String name) {return new Artist(name, "UK")}
+        protected Artist readArtistFromDB(String name) {
+            return new Artist(name, "UK");
+        }
     }
 
     class OldArtistService extends ArtistService {
@@ -33,7 +35,7 @@ public class Niceties {
 
     class Java8ArtistService extends ArtistService {
         // BEGIN ARTIST_CACHE_COMPUTE
-        public Artist getArtist(String name) { return artistCache.computeIfAbsent(name, this::readArtistFromDB)}
+        public Artist getArtist(String name) { return artistCache.computeIfAbsent(name, this::readArtistFromDB); }
         // END ARTIST_CACHE_COMPUTE
     }
 
@@ -52,16 +54,15 @@ public class Niceties {
             }
         }
 
-        class Java8Count {
-            public Map<Artist, Integer> countAlbums(Map<Artist, List<Album>> albumsByArist) {
-                // BEGIN COUNT_ALBUMS_VALUES_FOREACH
-                Map<Artist, Integer> countOfAlbums = new HashMap<>();
-                albumsByArist.forEach((artist, albums) -> {
-                    countOfAlbums.put(artist, albums.size());
-                });
-                // END COUNT_ALBUMS_VALUES_FOREACH
-                return countOfAlbums;
-            }
+    class Java8Count {
+        public Map<Artist, Integer> countAlbums (Map<Artist, List<Album>> albumsByArist) {
+            // BEGIN COUNT_ALBUMS_VALUES_FOREACH
+            Map<Artist, Integer> countOfAlbums = new HashMap<> ();
+            albumsByArist.forEach ((artist, albums) -> {
+                countOfAlbums.put (artist, albums.size ());
+            });
+            // END COUNT_ALBUMS_VALUES_FOREACH
+            return countOfAlbums;
         }
     }
 }
