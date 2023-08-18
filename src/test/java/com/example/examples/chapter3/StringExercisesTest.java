@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Optional;
 
-import static org.example.exercises.StringExercises.countLowercaseLetters;
-import static org.example.exercises.StringExercises.mostLowercaseString;
+import static org.example.exercises.chapter3.StringExercises.countLowercaseLetters;
+import static org.example.exercises.chapter3.StringExercises.mostLowercaseString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StringExercisesTest {

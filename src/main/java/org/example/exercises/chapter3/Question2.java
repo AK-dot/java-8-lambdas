@@ -1,4 +1,4 @@
-package org.example.exercises;
+package org.example.exercises.chapter3;
 
 import org.example.examples.chapter1.Artist;
 

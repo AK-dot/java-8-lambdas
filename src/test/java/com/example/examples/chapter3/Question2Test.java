@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
 import static org.example.examples.chapter3.StreamExercises.countBandMembersExternal;
-import static org.example.exercises.Question2.countBandMembersInternal;
+import static org.example.exercises.chapter3.Question2.countBandMembersInternal;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Question2Test {

@@ -1,16 +1,13 @@
 package com.example.examples.chapter3;
 
-import org.example.examples.chapter1.Album;
 import org.example.examples.chapter1.SampleData;
-import org.example.exercises.Question1;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Stream;
 
 import static org.example.examples.chapter1.SampleData.*;
-import static org.example.exercises.Question1.*;
+import static org.example.exercises.chapter3.Question1.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Question1Test {
